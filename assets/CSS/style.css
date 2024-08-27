@@ -1,13 +1,96 @@
-html,
+/* Estilos globales */
 body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  background-color: #1d2124;
-  text-align: center;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  color: #f8f9fa;
-  scroll-behavior: smooth;
-  height: 100%;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #333;
 }
 
+/* Estilos para el contenedor de la calculadora */
+.calculadora {
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Estilos para la pantalla de la calculadora */
+.pantalla {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 2em;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Estilos para los botones */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.boton {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Estilo hover y active para los botones */
+.boton:hover {
+  background: #95a5a6;
+  transform: translateY(-3px);
+}
+
+.boton:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos diferenciados para botones de operaciones */
+.boton.operacion {
+  background: #f39c12;
+  color: white;
+}
+
+.boton.operacion:hover {
+  background: #e67e22;
+}
+
+.boton.igual {
+  grid-column: span 2;
+  background: #27ae60;
+  color: white;
+}
+
+.boton.igual:hover {
+  background: #2ecc71;
+}
+
+/* Estilos diferenciados para el botón de limpiar */
+.boton.clear {
+  background: #e74c3c;
+  color: white;
+}
+
+.boton.clear:hover {
+  background: #c0392b;
+}
