@@ -70,7 +70,11 @@ function calcular() {
             calculo = anterior * actual;
             break;
         case '/':
-            calculo = anterior / actual;
+            if (actual === 0) {
+                calculo = "Error";
+            } else {
+                calculo = anterior / actual;
+            }
             break;
         default:
             return;
